@@ -15,7 +15,7 @@ let candidateAnswers = [];
 let numberOfQuestions = questions.length;
 let numberOfCorrect = 0;
 
-let grade = 0
+let grade = 0;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
@@ -45,6 +45,8 @@ function gradeQuiz(candidateAnswers) {
     }
   }
 
+  let grade = 0;
+  
   grade = (numberOfCorrect / numberOfQuestions) * 100;
   console.log(`>>> Overall Grade: ${grade}% (${numberOfCorrect} of ${numberOfQuestions} responses correct) <<<`)
 
