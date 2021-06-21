@@ -25,7 +25,7 @@ function askQuestion() {
   // candidateAnswer = input.question(question);
 
   for (let i = 0; i < questions.length; i++) {
-    candidateAnswers[i] = String(input.question(questions[i])).toLowerCase();
+    candidateAnswers[i] = input.question(questions[i] + " ");
   }
 }
 
@@ -38,7 +38,7 @@ function gradeQuiz(candidateAnswers) {
   }
   
   for (let i = 0; i < questions.length; i++) {
-    if (candidateAnswers[i] == String(correctAnswers[i]).toLowerCase()) {
+    if (String(candidateAnswers[i]).toLowerCase() == String(correctAnswers[i]).toLowerCase()) {
       numberOfCorrect += 1;
     }
   }
