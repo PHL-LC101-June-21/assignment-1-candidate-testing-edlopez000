@@ -12,10 +12,8 @@ let questions = [ "Who was the first American woman in space? " , "True or false
 let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
 let candidateAnswers = [];
 
-let numberOfQuestions = questions.length;
-let numberOfCorrect = 0;
 
-let grade = 0;
+let numberOfQuestions = questions.length;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
@@ -34,6 +32,8 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+  
+  let numberOfCorrect = 0;
 
   for (let i = 0; i < candidateAnswers.length; i++) {
     console.log(`Your answer: ${candidateAnswers[i]}\nThe correct answer: ${correctAnswers[i]}`);
@@ -46,9 +46,11 @@ function gradeQuiz(candidateAnswers) {
   }
 
   let grade = 0;
-  
+
   grade = (numberOfCorrect / numberOfQuestions) * 100;
-  console.log(`>>> Overall Grade: ${grade}% (${numberOfCorrect} of ${numberOfQuestions} responses correct) <<<`)
+  console.log(`>>> Overall Grade: ${grade}% (${numberOfCorrect} of ${numberOfQuestions} responses correct) <<<`);
+
+  numberOfCorrect = 0;
 
   return grade;
 }
